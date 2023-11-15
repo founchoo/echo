@@ -1,0 +1,8 @@
+server:
+  port: 8876
+  max-http-header-size: 102400
+
+spring:
+  # yml中配置静态文件的url
+  mvc:
+    static-path-pattern: /**

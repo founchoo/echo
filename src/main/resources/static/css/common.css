@@ -1,0 +1,31 @@
+.scrollable-element {
+  padding-top: 15px;
+  padding-bottom: 60px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.header-custom {
+    border-color: rgb(var(--mdb-primary-rgb));
+    background: linear-gradient(90deg, rgb(var(--mdb-primary-rgb)), transparent);
+}
+
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
+    color: rgb(var(--mdb-primary-rgb));
+}
+
+.container {
+    width: 85%;
+    margin-left: 15%;
+}
+
+.sidenav-item {
+    border-radius: 0 25px 25px 0;
+    margin-bottom: 10px;
+}
+
+.sidenav-item-active {
+    background: #e3ebf7;
+}

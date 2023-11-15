@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="base/layout.html">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+	<script src="js/index.js"></script>
+	<link href="css/index.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header th:replace="public/header :: header"></header>
+
+<div class="container scrollable-element animate__animated animate__fadeIn">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="note note-primary mb-3">
+				<strong>Note: </strong>Click the corresponding button to start a pronunciation demonstration.
+			</div>
+			<div class="card mb-3">
+				<div class="card-body">
+					<h5 class="card-title">Initials</h5>
+					<div th:replace="public/pron :: initialsPron"></div>
+				</div>
+			</div>
+
+			<div class="card mb-3">
+				<div class="card-body">
+					<h5 class="card-title">Final form</h5>
+					<div th:replace="public/pron :: vowelsPron"></div>
+				</div>
+			</div>
+
+			<div class="card mb-3">
+				<div class="card-body">
+					<h5 class="card-title">Overall Syllable Recognition</h5>
+					<div th:replace="public/pron :: altogetherPron"></div>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-md-6">
+			<div class="card mb-3">
+				<video id="video" src="video/Cyberface.mp4" muted="muted" autobuffer class="rounded-3">
+					<div class="fallback"> <p>You must have an HTML5 capable browser</p> </div>
+				</video>
+			</div>
+			<div class="card mb-3">
+				<div class="card-body">
+					<h5 class="card-title">Pronunciation Detection</h5>
+					<p id="recognitionResult" class="card-text">
+						Test results will be displayed here
+					</p>
+					<div class="btn-group" role="group" aria-label="Basic example">
+						<button type="button" onclick="recognition(this)" class="btn btn-primary">Start recording</button>
+					</div>
+					<button type="button" class="btn btn-primary"><a href="mailto: email@example.com" class="text-white">Contact tutor</a></button>
+				</div>
+			</div>
+
+			<div class="note note-warning mb-3">
+				<strong>Note: </strong>If you have questions about the test results or need more professional guidance, please submit video and audio to contact the human tutor.
+			</div>
+
+			<div class="card mb-3">
+				<div class="card-body">
+					<h5 class="card-title">Sentence pronunciation</h5>
+					<div class="form-outline mb-2">
+						<input type="text" id="typeText" class="form-control" />
+						<label class="form-label" for="typeText">Enter any text</label>
+						<div class="form-notch">
+							<div class="form-notch-leading" style="width: 9px;"></div>
+							<div class="form-notch-middle" style="width: 87.2px;"></div>
+							<div class="form-notch-trailing"></div>
+						</div>
+					</div>
+					<button disabled id="textButton" type="button" class="btn btn-primary" onclick="speak('id', 'typeText');">Pronounce
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer th:replace="public/footer :: footer"></footer>
+</body>
+
+</html>

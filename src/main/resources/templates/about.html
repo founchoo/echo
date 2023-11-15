@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="base/layout.html">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About</title>
+	<script src="js/about.js"></script>
+	<link href="css/about.css" rel="stylesheet">
+</head>
+
+<body>
+<header th:replace="public/header :: header"></header>
+<div class="container scrollable-element animate__animated animate__fadeIn">
+
+	<div class="col-md-12">
+		<div class="card mb-3">
+			<div class="card-body">
+				<h5 class="card-title">About Us</h5>
+				<p class="card-text">
+					This project was developed by the 2020 software engineering students of the Detroit Green Institute of Technology, Hubei University of Technology, to help people with disabilities practice pronunciation.
+				</p>
+			</div>
+		</div>
+
+		<div class="card mb-3">
+			<div class="card-body">
+				<h5 class="card-title">Thanks</h5>
+				<p class="card-text">
+					This project uses the following open source projects:
+					<ul>
+						<li>
+							<a href="http://du.hanyupinyin.cn/" target="_blank">Chinese Pinyin Database</a>
+						</li>
+						<li>
+							<a href="https://face.cyberstudio.app/" target="_blank">Cyberface</a>
+						</li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+<footer th:replace="public/footer :: footer"></footer>
+</body>
+
+</html>

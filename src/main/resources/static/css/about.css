@@ -1,0 +1,9 @@
+.logo-size {
+    width: 60px;
+    height: 60px;
+}
+
+.header-custom {
+    border-color: rgb(var(--mdb-primary-rgb));
+    background: linear-gradient(90deg, rgb(var(--mdb-primary-rgb)), transparent);
+}

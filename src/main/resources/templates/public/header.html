@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="base/layout.html">
+<body>
+
+<header th:fragment="header">
+	<!-- Sidenav -->
+	<nav class="sidenav" style="width: 15%;" data-mdb-hidden="false">
+
+		<script src="js/common.js"></script>
+		<!-- MDB -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+		<link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+		<!-- Font Awesome -->
+		<!--<script src="https://kit.fontawesome.com/413f07e654.js" crossorigin="anonymous"></script>-->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+		<link href="css/common.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+		<a class="ripple d-flex justify-content-center py-4" href="/" data-mdb-ripple-color="primary">
+			<img src="" draggable="false">
+		</a>
+
+		<ul id="navList" class="sidenav-menu text-primary">
+			<li class="sidenav-item">
+				<a href="/" class="sidenav-link">
+					<i class="fa-solid fa-chalkboard me-3 text-primary"></i>Home
+				</a>
+			</li>
+			<li class="sidenav-item">
+				<a href="/about" class="sidenav-link">
+					<i class="fa-solid fa-circle-info me-3 text-primary"></i>About
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<!-- Sidenav -->
+</header>
+
+</body>
+</html>

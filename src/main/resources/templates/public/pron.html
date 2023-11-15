@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="base/layout.html">
+
+<body>
+
+<button th:fragment="defaultItem" style="text-transform: lowercase" type="button" onclick="pron(this);" class="btn btn-secondary" th:text="${pron}"></button>
+
+<div th:fragment="initialsPron" class="d-flex align-content-start flex-wrap">
+	<div th:each="pron : ${initialsPron}" class="m-1">
+		<button th:replace="public/pron :: defaultItem"></button>
+		<audio hidden th:src="|http://du.hanyupinyin.cn/du/pinyin/${pron}.mp3|" controls preload="none"></audio>
+	</div>
+</div>
+
+<div th:fragment="vowelsPron" class="d-flex align-content-start flex-wrap">
+	<div th:each="pron : ${vowelsPron}" class="m-1">
+		<button th:replace="public/pron :: defaultItem"></button>
+		<audio hidden th:src="|http://du.hanyupinyin.cn/du/pinyin/${pron}.mp3|" controls preload="none"></audio>
+	</div>
+</div>
+
+<div th:fragment="altogetherPron" class="d-flex align-content-start flex-wrap">
+	<div th:each="pron : ${altogetherPron}" class="m-1">
+		<button th:replace="public/pron :: defaultItem"></button>
+		<audio hidden th:src="|http://du.hanyupinyin.cn/du/pinyin/${pron}1.mp3|" controls preload="none"></audio>
+	</div>
+</div>
+
+
+</body>
+
+</html>
