@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'echofordisabled'
           slot-name: 'Production'
-          package: '*.war'
+          package: '*.jar'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E9D70CA8D3704F1B8CFF0E2D9DD0C528 }}
